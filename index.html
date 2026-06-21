@@ -23,7 +23,7 @@
 <meta property="twitter:image" content="https://halderkaushiki.github.io/yoga/assets/preview.jpg">
 
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
 <!-- Structured Schema Data for Local Business -->
 <script type="application/ld+json">
@@ -86,7 +86,7 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--crm);overflow-x:hidden}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--crm);overflow-x:hidden}
 
 /* ── LOADER ── */
 #loader{position:fixed;inset:0;z-index:9999;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;transition:opacity .8s,visibility .8s}
@@ -237,17 +237,23 @@ section{padding:96px 48px;position:relative;z-index:1}
 /* ── TESTIMONIALS ── */
 .testi{background:var(--bg)}
 .testi-in{max-width:1100px;margin:0 auto}
-.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:52px}
-.tcard{background:var(--bg2);border:1px solid var(--bdr);border-radius:24px;padding:36px 30px;position:relative;overflow:hidden;transition:all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);cursor:pointer}
-.tcard::before{content:'🪷';position:absolute;top:16px;right:20px;font-size:22px;opacity:.18}
-.tq{font-size:38px;color:var(--pur);font-family:'Cormorant Garamond',serif;line-height:1;margin-bottom:10px}
-.tstars{font-size:13px;color:var(--lil);margin-bottom:8px}
-.ttxt{font-size:14px;color:rgba(245,230,240,.58);line-height:1.85;font-style:italic;margin-bottom:18px}
-.tauth{font-size:13px;color:var(--blu);font-weight:600}
-.tcard:nth-child(3n+1){transform:rotate(-1.5deg)}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:28px;margin-top:52px}
+.tcard{background:rgba(30, 26, 64, 0.35);border:1px solid var(--bdr);border-radius:24px;padding:32px;display:grid;grid-template-columns:1.25fr 1fr;gap:24px;position:relative;overflow:hidden;transition:all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);backdrop-filter:blur(10px);box-shadow:0 8px 32px rgba(0, 0, 0, 0.2);cursor:pointer;min-height:260px}
+.tcard::after{content:'';position:absolute;top:15%;bottom:15%;left:54.5%;width:1px;border-left:1px dashed rgba(155, 125, 212, 0.25);pointer-events:none}
+.tcard-left{display:flex;flex-direction:column;justify-content:space-between}
+.tstars{font-size:12px;color:var(--blu);letter-spacing:2px;margin-bottom:14px}
+.ttxt{font-size:13.5px;color:rgba(245,230,240,.75);line-height:1.8;font-style:italic;margin-bottom:0}
+.tcard-right{display:flex;flex-direction:column;justify-content:space-between;padding-left:12px;position:relative}
+.tstamp-wrap{position:absolute;top:0;right:0;width:55px;height:55px}
+.tstamp{width:32px;height:40px;border:1px dashed rgba(232, 180, 216, 0.6);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;background:rgba(232, 180, 216, 0.05);position:absolute;top:0;right:0;box-shadow:0 2px 5px rgba(0,0,0,0.2)}
+.tpostmark{position:absolute;top:-10px;right:-10px;width:65px;height:65px;pointer-events:none;transform:rotate(-15deg)}
+.taddress{margin-top:50px;display:flex;flex-direction:column;gap:8px}
+.tline{font-size:11px;color:rgba(245,230,240,.45);border-bottom:1px dotted rgba(155,125,212,0.25);padding-bottom:4px;letter-spacing:0.5px}
+.tsender{font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;font-weight:600;color:var(--blu);text-align:right;margin-top:20px;letter-spacing:0.5px}
+.tcard:nth-child(3n+1){transform:rotate(-1deg)}
 .tcard:nth-child(3n+2){transform:rotate(1.2deg)}
-.tcard:nth-child(3n+3){transform:rotate(-1deg)}
-.tcard:hover{transform:rotate(0deg) translateY(-12px) scale(1.03);border-color:var(--lil);box-shadow:0 24px 48px rgba(155,125,212,.22),var(--glow);z-index:10}
+.tcard:nth-child(3n+3){transform:rotate(-0.8deg)}
+.tcard:hover{transform:rotate(0deg) translateY(-10px) scale(1.02);border-color:var(--blu);box-shadow:0 20px 40px rgba(155, 125, 212, 0.15),var(--glow);z-index:10}
 
 /* ── CONTACT ── */
 .contact{background:var(--bg2)}
@@ -268,7 +274,7 @@ section{padding:96px 48px;position:relative;z-index:1}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
 .fg{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
 .fg label{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--lil);font-weight:600}
-.fg input,.fg select,.fg textarea{padding:11px 14px;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--crm);background:rgba(30,26,64,.65);border:1px solid var(--bdr);outline:none;transition:border-color .2s}
+.fg input,.fg select,.fg textarea{padding:11px 14px;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;color:var(--crm);background:rgba(30,26,64,.65);border:1px solid var(--bdr);outline:none;transition:border-color .2s}
 .fg input::placeholder,.fg textarea::placeholder{color:rgba(245,230,240,.22)}
 .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--lil)}
 .fg select option{background:var(--bg2);color:var(--crm)}
@@ -348,6 +354,15 @@ footer{background:#080714;color:rgba(245,230,240,.38);position:relative;z-index:
   .footer-mid,.footer-dev{padding-left:20px;padding-right:20px}
   .footer-mid-inner{flex-direction:column;text-align:center}
   .footer-dev-inner{flex-direction:column;align-items:flex-start;gap:14px}
+  .tcard{grid-template-columns:1fr;gap:20px;padding:24px;min-height:auto}
+  .tcard::after{display:none}
+  .tcard-right{padding-left:0;border-top:1px dashed rgba(155,125,212,0.2);padding-top:20px}
+  .taddress{margin-top:15px}
+  
+  /* Disable mobile card rotations and active transforms for cleaner vertical stacking */
+  .ccard2, .bitem, .tcard, .sched-card {
+    transform: none !important;
+  }
 }
 
 /* ══════════════════════════════════════════
@@ -516,7 +531,7 @@ footer{background:#080714;color:rgba(245,230,240,.38);position:relative;z-index:
 #chat-input{
   flex:1;padding:10px 14px;border-radius:22px;
   background:rgba(13,11,31,.7);border:1px solid var(--bdr);
-  color:var(--crm);font-family:'DM Sans',sans-serif;font-size:13px;
+  color:var(--crm);font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;
   outline:none;transition:border-color .2s,box-shadow .2s;
 }
 #chat-input::placeholder{color:rgba(245,230,240,.25)}
@@ -564,7 +579,7 @@ footer{background:#080714;color:rgba(245,230,240,.38);position:relative;z-index:
   background: rgba(74, 61, 140, 0.15);
   border: 1px solid var(--bdr);
   color: rgba(245, 230, 240, 0.6);
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 600;
   font-size: 13px;
   letter-spacing: 1px;
@@ -814,7 +829,7 @@ footer{background:#080714;color:rgba(245,230,240,.38);position:relative;z-index:
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 16px;
   font-weight: 600;
   color: var(--crm);
@@ -1297,23 +1312,85 @@ footer{background:#080714;color:rgba(245,230,240,.38);position:relative;z-index:
     <div class="slabel">Testimonials</div>
     <h2 class="stitle">Words from Our <em>Community</em></h2>
     <div class="tgrid">
+      <!-- Postcard 1 -->
       <div class="tcard reveal">
-        <div class="tq">"</div>
-        <div class="tstars">★ ★ ★ ★ ★</div>
-        <div class="ttxt">Jemma di's classes have transformed my life. I came with a stiff back and constant anxiety — six months later, I feel like a completely different person. Her teaching style is so warm and authentic.</div>
-        <div class="tauth">— Priya Sharma, Madhyamgram</div>
+        <div class="tcard-left">
+          <div class="tstars">★ ★ ★ ★ ★</div>
+          <p class="ttxt">Jemma di's classes have transformed my life. I came with a stiff back and constant anxiety — six months later, I feel like a completely different person. Her teaching style is so warm and authentic.</p>
+        </div>
+        <div class="tcard-right">
+          <div class="tstamp-wrap">
+            <div class="tstamp">🪷</div>
+            <div class="tpostmark">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <circle cx="50" cy="50" r="40" stroke="rgba(155, 125, 212, 0.4)" stroke-width="1.5" fill="none" stroke-dasharray="3, 3"/>
+                <path d="M10 50 L90 50 M20 30 L80 30 M20 70 L80 70" stroke="rgba(155, 125, 212, 0.3)" stroke-width="1"/>
+                <text x="50" y="47" font-size="8" fill="rgba(155, 125, 212, 0.5)" text-anchor="middle" letter-spacing="1">MADHYAMGRAM</text>
+                <text x="50" y="58" font-size="7" fill="rgba(155, 125, 212, 0.5)" text-anchor="middle" letter-spacing="0.5">YOGA P.O.</text>
+              </svg>
+            </div>
+          </div>
+          <div class="taddress">
+            <div class="tline">To: Jemma di</div>
+            <div class="tline">Pure Balance Yoga</div>
+            <div class="tline">Madhyamgram, Kolkata</div>
+          </div>
+          <div class="tsender">— Priya Sharma</div>
+        </div>
       </div>
+
+      <!-- Postcard 2 -->
       <div class="tcard reveal">
-        <div class="tq">"</div>
-        <div class="tstars">★ ★ ★ ★ ★</div>
-        <div class="ttxt">The Ladies Special class is a haven. It's rare to find such a mindful, women-centred yoga space in Kolkata. Jemma Kumari's guidance is patient, precise and deeply caring.</div>
-        <div class="tauth">— Anita Devi, Barasat</div>
+        <div class="tcard-left">
+          <div class="tstars">★ ★ ★ ★ ★</div>
+          <p class="ttxt">The Ladies Special class is a haven. It's rare to find such a mindful, women-centred yoga space in Kolkata. Jemma Kumari's guidance is patient, precise and deeply caring.</p>
+        </div>
+        <div class="tcard-right">
+          <div class="tstamp-wrap">
+            <div class="tstamp">🪷</div>
+            <div class="tpostmark">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <circle cx="50" cy="50" r="40" stroke="rgba(155, 125, 212, 0.4)" stroke-width="1.5" fill="none" stroke-dasharray="3, 3"/>
+                <path d="M10 50 L90 50 M20 30 L80 30 M20 70 L80 70" stroke="rgba(155, 125, 212, 0.3)" stroke-width="1"/>
+                <text x="50" y="47" font-size="8" fill="rgba(155, 125, 212, 0.5)" text-anchor="middle" letter-spacing="1">MADHYAMGRAM</text>
+                <text x="50" y="58" font-size="7" fill="rgba(155, 125, 212, 0.5)" text-anchor="middle" letter-spacing="0.5">YOGA P.O.</text>
+              </svg>
+            </div>
+          </div>
+          <div class="taddress">
+            <div class="tline">To: Jemma di</div>
+            <div class="tline">Pure Balance Yoga</div>
+            <div class="tline">Madhyamgram, Kolkata</div>
+          </div>
+          <div class="tsender">— Anita Devi</div>
+        </div>
       </div>
+
+      <!-- Postcard 3 -->
       <div class="tcard reveal">
-        <div class="tq">"</div>
-        <div class="tstars">★ ★ ★ ★ ★</div>
-        <div class="ttxt">Our whole family does Surya Namaskar together every morning now thanks to Pure Balance Yoga. My kids are calmer, my husband's posture is better, and I have never felt more energized!</div>
-        <div class="tauth">— Meera Banerjee, Sripur</div>
+        <div class="tcard-left">
+          <div class="tstars">★ ★ ★ ★ ★</div>
+          <p class="ttxt">Our whole family does Surya Namaskar together every morning now thanks to Pure Balance Yoga. My kids are calmer, my husband's posture is better, and I have never felt more energized!</p>
+        </div>
+        <div class="tcard-right">
+          <div class="tstamp-wrap">
+            <div class="tstamp">🪷</div>
+            <div class="tpostmark">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <circle cx="50" cy="50" r="40" stroke="rgba(155, 125, 212, 0.4)" stroke-width="1.5" fill="none" stroke-dasharray="3, 3"/>
+                <path d="M10 50 L90 50 M20 30 L80 30 M20 70 L80 70" stroke="rgba(155, 125, 212, 0.3)" stroke-width="1"/>
+                <text x="50" y="47" font-size="8" fill="rgba(155, 125, 212, 0.5)" text-anchor="middle" letter-spacing="1">MADHYAMGRAM</text>
+                <text x="50" y="58" font-size="7" fill="rgba(155, 125, 212, 0.5)" text-anchor="middle" letter-spacing="0.5">YOGA P.O.</text>
+              </svg>
+            </div>
+          </div>
+          <div class="taddress">
+            <div class="tline">To: Jemma di</div>
+            <div class="tline">Pure Balance Yoga</div>
+            <div class="tline">Madhyamgram, Kolkata</div>
+          </div>
+          <div class="tsender">— Meera Banerjee</div>
+        </div>
       </div>
     </div>
   </div>
@@ -1743,22 +1820,6 @@ for(let i=0;i<140;i++){
   starsEl.appendChild(s);
 }
 
-// Floating lotus petals
-const floaterEl=document.getElementById('floaters');
-const emojis=['🪷','🌸','✦','❋','🌺'];
-for(let i=0;i<18;i++){
-  const f=document.createElement('div');
-  f.className='floater';
-  const e=emojis[Math.floor(Math.random()*emojis.length)];
-  f.textContent=e;
-  const fs=Math.random()*16+12;
-  const left=Math.random()*100;
-  const dur=Math.random()*14+10;
-  const dly=Math.random()*16;
-  const mo=(Math.random()*.15+.05).toFixed(2);
-  f.style.cssText=`--fs:${fs}px;left:${left}%;--dur:${dur}s;--dly:${dly}s;--mo:${mo}`;
-  floaterEl.appendChild(f);
-}
 
 // Scroll reveal
 const io=new IntersectionObserver(entries=>{
@@ -1928,28 +1989,6 @@ function switchDay(day) {
   hero.appendChild(wrap);
 })();
 
-// ── Drifting petals across sections ──
-(function(){
-  const sections = document.querySelectorAll('section, .lotus-banner');
-  sections.forEach(sec => {
-    sec.style.position = 'relative';
-    sec.style.overflow = 'hidden';
-    const emojis = ['🪷','🌸','✦'];
-    for(let i = 0; i < 4; i++){
-      const el = document.createElement('div');
-      el.className = 'sec-petal';
-      el.textContent = emojis[i % emojis.length];
-      const sf = (Math.random()*10+8).toFixed(0);
-      const sd = (Math.random()*20+18).toFixed(1);
-      const sdd = (Math.random()*20).toFixed(1);
-      const sy = ((Math.random()*60) - 30).toFixed(0);
-      const so = (Math.random()*0.08+0.04).toFixed(2);
-      const top = (Math.random()*80+10).toFixed(0);
-      el.style.cssText = `--sf:${sf}px;--sd:${sd}s;--sdd:${sdd}s;--sy:${sy}px;--so:${so};top:${top}%`;
-      sec.appendChild(el);
-    }
-  });
-})();
 
 // ── Chatbot NLP Matcher Engine ──
 const chatHistory = [];
