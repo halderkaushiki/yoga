@@ -1181,6 +1181,14 @@ footer{background:#080714;color:rgba(245,230,240,.38);position:relative;z-index:
         <span class="ctag" style="background:rgba(212,169,106,.15);color:#d4a96a">Energizing</span>
       </div>
 
+      <div class="ccard2 reveal">
+        <div class="cstripe" style="background:linear-gradient(90deg,#ff7e5f,#feb47b)"></div>
+        <span class="cicon">⚡</span>
+        <div class="cname">Ashtanga Vinyasa</div>
+        <div class="cdesc">A dynamic, structured style of yoga synchronizing breath with a progressive series of postures. Builds intense internal heat, stamina, and physical strength.</div>
+        <span class="ctag" style="background:rgba(255,126,95,.15);color:#ff7e5f">Vigorous Flow</span>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1619,7 +1627,7 @@ footer{background:#080714;color:rgba(245,230,240,.38);position:relative;z-index:
         <div class="fg"><label>Phone Number</label><input type="tel" placeholder="+91 98765 43210"/></div>
       </div>
       <div class="fg"><label>Email Address</label><input type="email" placeholder="priya@email.com"/></div>
-      <div class="fg"><label>Class Interest</label><select><option>Hatha Yoga</option><option>Pranayama</option><option>Meditation</option><option>Ladies Special</option><option>Family Yoga</option><option>Surya Namaskar</option></select></div>
+      <div class="fg"><label>Class Interest</label><select><option>Hatha Yoga</option><option>Pranayama</option><option>Meditation</option><option>Ladies Special</option><option>Family Yoga</option><option>Surya Namaskar</option><option>Ashtanga Vinyasa</option></select></div>
       <div class="fg"><label>Message (Optional)</label><textarea placeholder="Tell us about your yoga experience or any health considerations…"></textarea></div>
       <button class="fsub" onclick="handleSubmit(this)">🪷 &nbsp; Send Enquiry</button>
     </div>
@@ -2030,9 +2038,9 @@ function getLocalResponse(text) {
       replies: ['Call +91 79800 76995', 'What classes do you offer?', 'Where is the studio?']
     };
   }
-  if (lower.includes('class') || lower.includes('course') || lower.includes('session') || lower.includes('hatha') || lower.includes('pranayama') || lower.includes('ladies') || lower.includes('meditation') || lower.includes('dhyana') || lower.includes('surya') || lower.includes('sun salutation')) {
+  if (lower.includes('class') || lower.includes('course') || lower.includes('session') || lower.includes('hatha') || lower.includes('pranayama') || lower.includes('ladies') || lower.includes('meditation') || lower.includes('dhyana') || lower.includes('surya') || lower.includes('sun salutation') || lower.includes('ashtanga') || lower.includes('vinyasa')) {
     return {
-      text: "We offer Hatha Yoga, Pranayama (breathwork), Guided Meditation (Dhyana), Ladies Special batch, Family Yoga, and Surya Namaskar sequences. Each class is designed to nurture physical alignment and mental calm. 🧘",
+      text: "We offer Hatha Yoga, Pranayama (breathwork), Guided Meditation (Dhyana), Ladies Special batch, Family Yoga, Surya Namaskar, and Ashtanga Vinyasa flow. Each class is designed to nurture physical alignment and mental calm. 🧘",
       replies: ['Class timings', 'Book free trial', 'Ladies Special info']
     };
   }
